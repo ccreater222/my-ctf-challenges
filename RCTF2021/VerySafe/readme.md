@@ -8,9 +8,9 @@
 
 I learn a funny issue from [2-and-a-bit-of-magic](https://speakerdeck.com/greendog/2-and-a-bit-of-magic)
 
-Caddy before 2.4.2 can path traversal in php-fpm
+Caddy before 2.4.2 can path traversal in PHP-FPM
 
-At the same time, I think of [MeowWorld in 巅峰极客](https://www.anquanke.com/post/id/218977#h2-3) and [camp-ctf-2015](https://web.archive.org/web/20201022203937/https://khack40.info/camp-ctf-2015-trolol-web-write-up/).Great thanks to them, I made a funny challenge.
+At the same time, I think of [MeowWorld in 巅峰极客](https://www.anquanke.com/post/id/218977#h2-3) and [camp-ctf-2015](https://web.archive.org/web/20201022203937/https://khack40.info/camp-ctf-2015-trolol-web-write-up/). Great thanks to them, I made a fun challenge.
 
 register_argc_argv is TRUE in default PHP docker configuration and peclcmd.php is in default PHP docker.
 

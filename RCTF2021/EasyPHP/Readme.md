@@ -6,24 +6,24 @@
 
 ## Write Up
 
-After read index.php we can know that 
+After reading index.php we can know that 
 
-1. Admin can read file
+1. Admin can read a file
 2. Every route need authentication except login in `$request->url`
 3.  `../` in `$_GET`,`$_POST`,`$_COOKIE`,`$_SESSION`  is not allowed
 
 Read nginx.conf we know that
 
-1. url contains admin only can be accessed by 127.0.0.1
-2. `REQUEST_URI` come from `$uri`, `$uri` is not URL decoded. php-fpm receive `$uri` and will urldecode it .
+1. URL contains admin only can be accessed by 127.0.0.1
+2. `REQUEST_URI` come from `$uri`, `$uri` is not URL decoded. PHP-FPM receives `$uri` and will urldecode it.
 
 ### Bypass Authentication
 
-Our goal is obviously to bypass authentication to read file, but within above message we can't do that.
+Our goal is obviously to bypass authentication to read a file, but within the above message, we can't do that.
 
 So we need to read the flight framework.
 
-In routing code we can find a interesting thing that it will pass a urldecoded url to route function.
+In routing code, we can find an interesting thing that it will pass a URL decoded URL to the route function.
 
 `$url_decoded = urldecode( $request->url );`
 
@@ -32,7 +32,7 @@ So we can bypass authentication by visit url path like `/%2561%2564%256d%2569%25
 
 ### Bypass `../` limitation
 
-But flag is in / ,so we need to bypass `../` limitation.
+But the flag is in /, so we need to bypass the `../` limitation.
 
 The file to read come from `"./".$request->query->data`
 
@@ -54,7 +54,7 @@ class Collection{
 
 But in init function overwrite query by
 
-```php
+```PHP
 
 
     public function init(){

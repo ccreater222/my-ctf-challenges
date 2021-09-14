@@ -2,14 +2,14 @@
 
 ## How to Setup Environment
 
-move `challenge.yml` to your repository `.github/workflows/challenge.yml`
+move `challenge.yml` to your repository `.github/workflows/challenge.yml
 
 ## Write Up
 
 1. GitHub masks secrets when they are printed to the console like `***`
 2. the flag is just a few numbers
 
-just make a script to generate payload and it also can prevent others get flag from your issue
+just make a script to generate payload and it also can prevent others get the flag from your issue
 
 ```python
 
